@@ -2,8 +2,8 @@
   "id": "power-rangers-essence20",
   "type": "system",
   "title": "Rangers • Essence20 (não oficial)",
-  "description": "Sistema de fã para Foundry VTT 14, compatível com criação de personagens, testes Essence20, combate, equipamentos, transformações e Zords. Não contém regras integrais, textos nem imagens protegidas do livro.",
-  "version": "0.1.0",
+  "description": "Sistema de fã para Foundry VTT 14.369; progressão 1–20 dos sete papéis, catálogos de referência, ficha estilizada, troca de retratos, testes Essence20 e Zords.",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Community adaptation"
@@ -55,6 +55,6 @@
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.power",
   "manifest": "https://github.com/tulioscost/power-rangers-essence20/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/power-rangers-essence20/releases/download/v0.1.0/power-rangers-essence20.zip",
+  "download": "https://github.com/tulioscost/power-rangers-essence20/releases/download/v0.2.0/power-rangers-essence20.zip",
   "url": "https://github.com/tulioscost/power-rangers-essence20"
 }

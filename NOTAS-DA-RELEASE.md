@@ -1,16 +1,9 @@
-# Rangers · Essence20 — v0.1.0
+# Rangers Essence20 — v0.2.0
 
-Versão inicial de adaptação técnica não oficial do sistema Essence20 para Foundry VTT 14.369.
+- Progressão automática de 140 marcos para sete papéis conforme tabelas do livro-base fornecido.
+- Benefícios próprios de classe e seleção de opções de evolução.
+- Ficha estilizada, página de evolução, importação de sete catálogos em compêndios do mundo.
+- Foto da ficha alterável por seletor de arquivos e por caminho/URL; modos civil e transformado.
+- Correção do manifesto: campos `download`/`manifest` apontam para a Release.
 
-## Inclui
-- Fichas de Ranger, NPC, Zord, Megaforma e Equipe.
-- Dado d20 + progressão de perícias, especializações, Edge e Snag.
-- Defesas, recursos, testes, combate, pontos de história e transformação.
-- Itens, armas, armaduras e ferramentas básicas para Zords e combinações.
-
-## Estado de validação
-- Testes unitários automatizados executados; **sem teste de inicialização real no Foundry 14.369**.
-- Algumas regras e automações avançadas permanecem manuais. Consulte `README.md`.
-- Sem textos/imagens oficiais do livro.
-
-**Instalação por URL:** utilize o arquivo `system.json` anexado à Release, depois de gerado com os links reais do repositório (automático no workflow GitHub Actions).
+**Limitações:** catálogos de referência, não compêndios oficiais completos; regras situacionais ainda manuais. Não foi validado executando o Foundry v14.369, apenas testes de código e validação estática.
