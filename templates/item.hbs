@@ -1,0 +1,26 @@
+<div class="ess20-root ess20-item-sheet">
+  <header class="ess20-header"><button type="button" class="ess20-image-button" data-action="portrait" title="Alterar imagem"><img class="ess20-portrait" src="{{item.img}}" alt="Imagem do item"></button><div class="ess20-identity"><span class="ess20-kicker">{{typeLabel}} • ESSENCE20</span><input class="ess20-name" type="text" name="name" value="{{item.name}}"></div><button type="button" data-action="roll"><i class="fa-solid fa-dice-d20"></i> ROLAR</button></header>
+  <main class="ess20-scroll"><div class="ess20-field-grid">
+  <label>Quantidade <input type="number" min="0" name="system.quantity" value="{{system.quantity}}"></label>
+  <label>Dano / efeito numérico <input type="number" min="0" name="system.damage" value="{{system.damage}}"></label>
+  <label>Perícia do teste <select name="system.attackSkill">{{#each skills}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}} ({{essence}})</option>{{/each}}</select></label>
+  <label>Defesa-alvo <select name="system.defense">{{#each defenses}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+  <label>Tipo de dano <select name="system.damageType">{{#each damages}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+  <label>Alcance <input type="text" name="system.range" value="{{system.range}}"></label>
+  <label>Deslocamentos do dado ↑/↓ <input type="number" name="system.bonusShift" min="-12" max="12" value="{{system.bonusShift}}"></label>
+  <label>Bônus fixo de teste <input type="number" name="system.bonusFlat" value="{{system.bonusFlat}}"></label>
+  <label>Bônus da Armadura (+Resistência) <input type="number" min="0" name="system.armorBonus" value="{{system.armorBonus}}"></label>
+  <label>Custo em Poder Pessoal <input type="number" min="0" name="system.powerCost" value="{{system.powerCost}}"></label>
+  <label>Cargas atuais <input type="number" min="0" name="system.charges.value" value="{{system.charges.value}}"></label>
+  <label>Máximo de cargas <input type="number" min="0" name="system.charges.max" value="{{system.charges.max}}"></label>
+  <label>Pré-requisitos <input type="text" name="system.requirement" value="{{system.requirement}}"></label>
+  <label class="ess20-check"><input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}}> Equipado</label>
+  <label class="ess20-check"><input type="checkbox" name="system.morphedOnly" {{#if system.morphedOnly}}checked{{/if}}> Exige transformação</label>
+  <label class="ess20-check"><input type="checkbox" name="system.consumable" {{#if system.consumable}}checked{{/if}}> Consumível</label>
+  <label class="ess20-check"><input type="checkbox" name="system.usesSkill" {{#if system.usesSkill}}checked{{/if}}> Faz teste de perícia</label>
+  </div>
+  <label class="ess20-text-block">Descrição resumida (redigida pelo grupo) <textarea name="system.description">{{system.description}}</textarea></label>
+  <label class="ess20-text-block">Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
+  </main>
+  <footer class="ess20-footer">Rangers · Essence20 · Item editável</footer>
+</div>

@@ -1,0 +1,67 @@
+/* Identidade gráfica original, sem recursos visuais do livro. */
+.rangers.ess20-sheet{--ess-ink:#172436;--ess-line:#a7bed0;--ess-muted:#6a7b91;--ess-bg:#eaf2f9;--ess-color:#c33443;color:var(--ess-ink);min-width:360px}
+.rangers.ess20-sheet .window-content{padding:0!important;overflow:hidden!important;background:#e7eff7!important;min-height:0}
+.rangers .ess20-root{--ess-color:var(--ranger-color,#d5374a);height:100%;display:flex;flex-direction:column;min-height:0;container-type:inline-size;background:linear-gradient(135deg,#f6fbff 0%,#e1e9f1 100%);color:var(--ess-ink);font-family:Roboto,Arial,sans-serif;font-size:13px}
+.rangers button{font:inherit;cursor:pointer;white-space:normal;background:#eaf0f7;border:1px solid #9caec4;border-radius:5px;color:#1c3048;min-height:28px;padding:4px 8px}
+.rangers button:hover{border-color:var(--ess-color);color:var(--ess-color);background:white}
+.rangers input,.rangers textarea,.rangers select{font:inherit;min-height:27px;color:#1d2d40;background:#fff;border:1px solid #aab9cb;border-radius:4px;min-width:0;padding:3px 6px}
+.rangers input[type=checkbox]{width:15px;min-height:15px;accent-color:var(--ess-color)}
+.rangers input[type=number]{text-align:center}
+.rangers .ess20-header{display:flex;gap:13px;align-items:center;flex:none;padding:14px 18px;background:linear-gradient(115deg,#111d30,#233a50);color:white;border-bottom:5px solid var(--ess-color);min-height:113px}
+.rangers .ess20-portrait{width:74px;height:74px;flex:none;object-fit:cover;border-radius:11px;border:2px solid #a6b1c6;cursor:pointer}
+.rangers .ess20-identity{flex:1;min-width:110px}
+.rangers .ess20-kicker{display:block;letter-spacing:.17em;text-transform:uppercase;font-size:9px;color:#b7cae0;font-weight:800;margin-bottom:6px}
+.rangers .ess20-name{width:100%;font-size:24px!important;font-weight:900;letter-spacing:.02em;background:transparent!important;border:0;border-bottom:1px solid #849bb2;border-radius:0;color:#fff!important;padding:1px 0}
+.rangers .ess20-id-line{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.rangers .ess20-id-line label{color:#c9d7e4;display:flex;align-items:center;gap:5px;font-size:10px}
+.rangers .ess20-id-line select,.rangers .ess20-id-line input{width:95px;max-width:105px;font-size:11px;min-height:24px}
+.rangers .ess20-id-line label:nth-child(2) input{width:42px}
+.rangers .ess20-hero-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:112px}
+.rangers .ess20-morph{background:var(--ess-color);font-weight:900;color:white;border:1px solid #fff;box-shadow:0 0 0 2px #567}
+.rangers .ess20-morph.is-active{background:#f4d357;color:#111}
+.rangers .ess20-topstats{display:grid;grid-template-columns:1.2fr 1.2fr repeat(4,minmax(60px,1fr));gap:5px;padding:11px 12px;flex:none;background:#f8fbff;border-bottom:1px solid #cbd9e5}
+.rangers .ess20-topstats>div{min-width:0;text-align:center;padding:5px 2px;border-right:1px solid #d7e0ec}
+.rangers .ess20-topstats strong{display:block;font-size:9px;letter-spacing:.1em;color:#6e7e96}
+.rangers .ess20-topstats b{display:block;font-size:22px;color:var(--ess-color);line-height:1.45}
+.rangers .ess20-topstats input{width:43px;max-width:44%;font-weight:800;font-size:16px;background:#f4f7fb;border:0}
+.rangers .ess20-topstats label{display:flex;align-items:center;justify-content:center;gap:2px}
+.rangers .ess20-topstats span{color:#808da0}
+.rangers .ess20-health-actions{display:flex;gap:4px;justify-content:center}.rangers .ess20-health-actions button{padding:1px 6px;min-height:21px;font-size:11px}
+.rangers .ess20-nav{display:flex;gap:5px;background:#c7d6e5;padding:7px 12px;overflow-x:auto;flex:none}
+.rangers .ess20-nav button{flex:1;border-radius:7px 7px 3px 3px;font-size:12px;font-weight:700;padding:6px 7px}
+.rangers .ess20-nav button.active{background:#1e324d;color:white;border-bottom:3px solid var(--ess-color)}
+.rangers .ess20-scroll{flex:1;overflow-y:auto!important;overflow-x:hidden;min-height:0;padding:15px 18px 24px}
+.rangers .ess20-hidden{display:none!important}
+.rangers .ess20-roll-control{display:flex;flex-wrap:wrap;align-items:center;gap:9px;background:#d6e3ef;border:1px solid #b7c7da;border-radius:8px;padding:7px 12px;margin-bottom:13px}
+.rangers .ess20-roll-control label{font-size:11px;font-weight:700;display:flex;align-items:center;gap:5px}
+.rangers .ess20-roll-control input[type=number]{width:56px}
+.rangers .ess20-check{display:inline-flex;align-items:center;gap:5px;font-weight:600;font-size:11px}
+.rangers .ess20-grid-essence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.rangers .ess20-essence-card{background:#23374c;color:#fff;border-top:4px solid var(--ess-color);padding:9px;display:flex;align-items:center;justify-content:space-between;border-radius:6px;gap:7px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+.rangers .ess20-essence-card input{width:50px;font-size:20px;font-weight:900;text-align:center}
+.rangers .ess20-skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rangers .ess20-skill-group,.rangers .ess20-item-category{border:1px solid var(--ess-line);background:white;border-radius:7px;overflow:hidden;box-shadow:0 2px 8px #27405b0b}
+.rangers h3{margin:0!important;color:#fff;background:#324b64;font-size:12px;letter-spacing:.055em;text-transform:uppercase;padding:9px 10px}
+.rangers .ess20-skill-list{padding:5px}
+.rangers .ess20-skill-line{display:flex;align-items:center;gap:4px;min-height:37px;padding:3px 0;border-bottom:1px solid #e9eef5}
+.rangers .ess20-skill-line:last-child{border:0}
+.rangers .ess20-roll{flex:1;text-align:left;min-width:100px;max-width:41%;font-weight:700;background:#eef5fb;border-color:transparent}
+.rangers .ess20-rank{display:flex;align-items:center;gap:1px}.rangers .ess20-rank input{width:36px;min-height:25px}.rangers .ess20-rank em{font-style:normal;font-size:10px;color:#405c7c;min-width:19px}
+.rangers .ess20-spec{flex:1;width:32px;padding:2px 3px;font-size:11px}
+.rangers .ess20-skill-line .ess20-check{font-size:10px;gap:2px}
+.rangers .ess20-help{background:#f8fcff;border-left:3px solid var(--ess-color);padding:11px 13px;border-radius:4px;margin:0 0 14px;font-size:12px}
+.rangers .ess20-item-category{margin-bottom:12px}.rangers .ess20-item-category h3{display:flex;justify-content:space-between;align-items:center}.rangers .ess20-item-category h3 button{background:transparent;color:white;border-color:#708299;min-height:22px}
+.rangers .ess20-item-row{display:flex;align-items:center;gap:5px;padding:8px 9px;border-bottom:1px solid #e1e9f3}.rangers .ess20-item-title{flex:1;min-width:90px;text-align:left;border:0;background:transparent;font-weight:700}.rangers .ess20-item-sub{color:#6e7984;font-size:10px}.rangers .ess20-item-row button{font-size:11px}.rangers .ess20-item-row .equipped{background:#e4f2e8;color:#24674b;border-color:#a9d5c4}
+.rangers .ess20-empty{margin:9px 12px;font-size:11px;font-style:italic;color:#8696a6}
+.rangers .ess20-field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:10px 0 18px}.rangers .ess20-field-grid label{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:700;color:#3a526d}.rangers .ess20-field-grid input,.rangers .ess20-field-grid select{width:100%;min-height:30px}
+.rangers .ess20-text-block{display:block;font-size:11px;font-weight:700;color:#35506b;margin:12px 0}.rangers textarea{display:block;width:100%;min-height:105px;resize:vertical;margin-top:5px;padding:9px;line-height:1.5}
+.rangers .ess20-action-row{display:flex;gap:8px;flex-wrap:wrap;margin:7px 0 18px}.rangers .ess20-action-row button{font-weight:700;padding:8px 11px;background:#e5edf5}
+.rangers .ess20-story{text-align:center;background:white;padding:18px;border:1px solid #bdd0df}.rangers .ess20-story strong{display:block;font-size:37px;color:var(--ess-color);margin:10px}
+.rangers .ess20-footer{display:flex;justify-content:space-between;padding:7px 17px;flex:none;background:#233b55;color:#aebed0;font-size:10px;letter-spacing:.08em}
+.rangers .ess20-item-sheet .ess20-scroll{padding:15px 22px}.rangers .ess20-item-sheet .ess20-name{font-size:20px!important}
+.ess20-chat{background:#edf3f8;border-left:5px solid var(--result,#4a6c95);padding:7px 12px;color:#27384e;border-radius:4px;margin:5px 0}.ess20-chat header{font-weight:900;color:#243752;font-size:14px}.ess20-chat-number{font-size:24px;font-weight:900;color:var(--result,#365)}.ess20-chat p{margin:4px 0;font-size:12px}
+@container (max-width: 670px){.rangers .ess20-skill-groups{grid-template-columns:1fr}}
+@media (max-width:690px){.rangers .ess20-header{padding:9px;gap:7px;flex-wrap:wrap}.rangers .ess20-portrait{width:55px;height:55px}.rangers .ess20-hero-actions{flex-direction:row;min-width:auto}.rangers .ess20-name{font-size:18px!important}.rangers .ess20-topstats{grid-template-columns:repeat(3,minmax(0,1fr))}.rangers .ess20-skill-groups{grid-template-columns:1fr}.rangers .ess20-grid-essence{grid-template-columns:repeat(2,minmax(0,1fr))}.rangers .ess20-field-grid{grid-template-columns:1fr}.rangers .ess20-skill-line{flex-wrap:wrap}.rangers .ess20-roll{max-width:none}.rangers .ess20-item-row{flex-wrap:wrap}.rangers .ess20-nav button{font-size:10px}}
+
+.rangers .ess20-image-button{padding:0;border:0;background:transparent;width:74px;height:74px;flex:none}.rangers .ess20-image-button .ess20-portrait{width:100%;height:100%}.rangers .ess20-skill-noroll{flex:1;min-width:100px;font-size:11px;padding:7px 9px;color:#354c60}.rangers .ess20-image-button:hover{background:transparent}
+@container (max-width: 670px){.ess20-grid-essence{grid-template-columns:repeat(2,minmax(0,1fr))}.ess20-topstats{grid-template-columns:repeat(3,minmax(0,1fr))}.ess20-field-grid{grid-template-columns:1fr}.ess20-header{flex-wrap:wrap}.ess20-item-row{flex-wrap:wrap}.ess20-hero-actions{flex-direction:row}.ess20-nav button{font-size:10px}}

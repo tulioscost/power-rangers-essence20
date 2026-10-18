@@ -1,0 +1,57 @@
+{
+  "id": "power-rangers-essence20",
+  "type": "system",
+  "title": "Rangers • Essence20 (não oficial)",
+  "description": "Sistema de fã para Foundry VTT 14, compatível com criação de personagens, testes Essence20, combate, equipamentos, transformações e Zords. Não contém regras integrais, textos nem imagens protegidas do livro.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Community adaptation"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14.369",
+    "maximum": "14.999"
+  },
+  "esmodules": [
+    "module/main.mjs"
+  ],
+  "styles": [
+    "styles/rangers.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "ranger": {},
+      "npc": {},
+      "zord": {},
+      "megaform": {},
+      "team": {}
+    },
+    "Item": {
+      "weapon": {},
+      "armor": {},
+      "gear": {},
+      "perk": {},
+      "gridpower": {},
+      "role": {},
+      "origin": {},
+      "influence": {},
+      "zordfeature": {}
+    }
+  },
+  "socket": false,
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "initiative": "1d20",
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": "resources.power"
+}

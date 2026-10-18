@@ -1,0 +1,65 @@
+<div class="ess20-root" style="--ranger-color: {{roleColor}}">
+  <header class="ess20-header">
+    <button type="button" class="ess20-image-button" data-action="portrait" title="Alterar retrato"><img class="ess20-portrait" src="{{actor.img}}" alt="Retrato do ator"></button>
+    <div class="ess20-identity">
+      <span class="ess20-kicker">ESSENCE20 · {{actorType}}</span>
+      <input class="ess20-name" name="name" type="text" value="{{actor.name}}" aria-label="Nome" />
+      <div class="ess20-id-line">
+        <label>Papel <select name="system.identity.role">{{#each roles}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label>
+        <label>Nível <input type="number" min="1" max="20" name="system.identity.level" value="{{system.identity.level}}"></label>
+        <label>Origem <input type="text" name="system.identity.origin" value="{{system.identity.origin}}" placeholder="Ex.: Atleta"></label>
+      </div>
+    </div>
+    <div class="ess20-hero-actions">
+      {{#if isRanger}}<button type="button" class="ess20-morph {{#if system.morph.active}}is-active{{/if}}" data-action="toggleMorph">{{#if system.morph.active}}DESMORFAR{{else}}MORFAR!{{/if}}</button>{{/if}}
+      <button type="button" data-action="initiative" title="Rolar iniciativa e enviar para combate"><i class="fa-solid fa-bolt"></i> Iniciativa</button>
+    </div>
+  </header>
+  <section class="ess20-topstats">
+    <div class="ess20-health"><strong>SAÚDE</strong><label><input type="number" min="0" name="system.resources.health.value" value="{{system.resources.health.value}}"><span>/</span><input type="number" min="0" name="system.resources.health.max" value="{{system.resources.health.max}}"></label><div class="ess20-health-actions"><button type="button" data-action="damage" data-amount="1" title="Sofrer 1 dano">−1</button><button type="button" data-action="heal" data-amount="1" title="Curar 1 ponto">+1</button></div></div>
+    <div class="ess20-power"><strong>PODER PESSOAL</strong><label><input type="number" min="0" name="system.resources.power.value" value="{{system.resources.power.value}}"><span>/</span><input type="number" min="0" name="system.resources.power.max" value="{{system.resources.power.max}}"></label></div>
+    <div class="ess20-stat"><strong>RESISTÊNCIA</strong><b>{{system.defenses.toughness}}</b></div>
+    <div class="ess20-stat"><strong>EVASÃO</strong><b>{{system.defenses.evasion}}</b></div>
+    <div class="ess20-stat"><strong>VONTADE</strong><b>{{system.defenses.willpower}}</b></div>
+    <div class="ess20-stat"><strong>ASTÚCIA</strong><b>{{system.defenses.cleverness}}</b></div>
+  </section>
+  <nav class="ess20-nav">{{#each tabs}}<button type="button" class="{{#if active}}active{{/if}}" data-action="tab" data-tab="{{id}}">{{name}}</button>{{/each}}</nav>
+  <main class="ess20-scroll">
+    <section class="ess20-tab {{#unless tabStats}}ess20-hidden{{/unless}}">
+      <div class="ess20-roll-control">
+        <label>Dificuldade <input type="number" data-control="dc" min="0" placeholder="Livre" title="DIF do teste; vazio envia apenas o resultado"></label>
+        <label>↑/↓ Dado <input type="number" data-control="shift" value="0" min="-12" max="12"></label>
+        <label>Bônus fixo <input type="number" data-control="flat" value="0"></label>
+        <label class="ess20-check"><input type="checkbox" data-control="edge"> Edge</label>
+        <label class="ess20-check"><input type="checkbox" data-control="snag"> Snag</label>
+      </div>
+      <div class="ess20-grid-essence">{{#each essences}}<label class="ess20-essence-card"><span>{{name}}</span><input type="number" min="0" max="30" name="system.essences.{{key}}" value="{{value}}"></label>{{/each}}</div>
+      <div class="ess20-skill-groups">{{#each skills}}<section class="ess20-skill-group"><h3>{{name}}</h3><div class="ess20-skill-list">{{#each entries}}<div class="ess20-skill-line">{{#if rollable}}<button type="button" title="Rolar {{name}}" class="ess20-roll" data-action="rollSkill" data-skill="{{key}}"><i class="fa-solid fa-dice-d20"></i> {{name}}</button>{{else}}<strong class="ess20-skill-noroll">{{name}}</strong>{{/if}}<label class="ess20-rank"><input type="number" min="0" max="6" name="system.skills.{{key}}.rank" value="{{rank}}"><em>{{die}}</em></label><input type="text" class="ess20-spec" placeholder="Especialização" name="system.skills.{{key}}.specialization" value="{{specialization}}">{{#if rollable}}<label class="ess20-check" title="Aplicar especialização nesta rolagem"><input type="checkbox" data-specialized="{{key}}"> Esp.</label>{{/if}}</div>{{/each}}</div></section>{{/each}}</div>
+    </section>
+    <section class="ess20-tab {{#unless tabItems}}ess20-hidden{{/unless}}">
+      <p class="ess20-help">Arraste itens da barra lateral para a ficha. Equipamentos equipados alteram a Resistência conforme seus bônus. Em poderes e armas, o botão Rolar aplica perícia, deslocamento e custo em Poder Pessoal.</p>
+      {{#each items}}<section class="ess20-item-category"><h3>{{label}} <button type="button" data-action="newItem" data-type="{{type}}" title="Criar {{label}}"> <i class="fa-solid fa-plus"></i></button></h3>
+      {{#if items.length}}<div class="ess20-items">{{#each items}}<div class="ess20-item-row" data-item-id="{{id}}"><button type="button" class="ess20-item-title" data-action="openItem" data-id="{{id}}"><i class="fa-regular fa-file-lines"></i> {{name}}</button><span class="ess20-item-sub">x{{quantity}}{{#if canConsume}} · Cargas {{charges}}{{/if}}</span>
+      {{#if canEquip}}<button type="button" data-action="equipItem" data-id="{{id}}" class="{{#if equipped}}equipped{{/if}}">{{#if equipped}}Equipado{{else}}Equipar{{/if}}</button>{{/if}}
+      {{#if canUse}}<button type="button" data-action="rollItem" data-id="{{id}}"><i class="fa-solid fa-dice-d20"></i> Rolar / Usar</button>{{/if}}
+      {{#if canConsume}}<button type="button" data-action="consumeItem" data-id="{{id}}">Consumir</button>{{/if}}
+      <button type="button" data-action="deleteItem" data-id="{{id}}" title="Excluir"><i class="fa-solid fa-trash"></i></button></div>{{/each}}</div>{{else}}<p class="ess20-empty">Nenhum item nesta categoria.</p>{{/if}}
+      </section>{{/each}}
+    </section>
+    <section class="ess20-tab {{#unless tabBackground}}ess20-hidden{{/unless}}">
+      <div class="ess20-field-grid"><label>Nome de herói <input type="text" name="system.identity.alias" value="{{system.identity.alias}}"></label><label>Equipe <input type="text" name="system.identity.team" value="{{system.identity.team}}"></label><label>Influências (até 3) <input type="text" name="system.identity.influences" value="{{system.identity.influences}}" placeholder="Separadas por vírgula"></label><label>Traje <input type="text" name="system.morph.suit" value="{{system.morph.suit}}"></label></div>
+      <label class="ess20-text-block">História e vínculos <textarea name="system.identity.background">{{system.identity.background}}</textarea></label><label class="ess20-text-block">Limitações, hang-ups, observações <textarea name="system.identity.notes">{{system.identity.notes}}</textarea></label>
+      <label class="ess20-text-block">Descrição física <textarea name="system.attributes.description">{{system.attributes.description}}</textarea></label>
+    </section>
+    <section class="ess20-tab {{#unless tabZord}}ess20-hidden{{/unless}}">
+      {{#if isRanger}}<div class="ess20-action-row"><button type="button" data-action="newZord"><i class="fa-solid fa-robot"></i> Criar Zord vinculado (Mestre)</button>{{#if system.morph.active}}<button type="button" data-action="unmorphSurvive">Desmorfagem de emergência (0 Saúde)</button>{{/if}}</div>{{/if}}
+      {{#if isZord}}<div class="ess20-action-row"><button type="button" data-action="createMegaform"><i class="fa-solid fa-robot"></i> Combinar Zords selecionados (Mestre)</button></div>{{/if}}
+      {{#if isTeam}}<section class="ess20-story"><h3>Pontos de História da Equipe</h3><strong>{{system.resources.story.value}}</strong><div><button type="button" data-action="storyMinus">−1</button><button type="button" data-action="storyPlus">+1</button></div><p>Compartilhe a posse desta ficha com os jogadores. O Mestre define a reserva inicial conforme o grupo.</p></section>{{else}}<div class="ess20-action-row"><button type="button" data-action="storyMinus">Gastar 1 Ponto de História</button><button type="button" data-action="storyPlus">Adicionar 1 Ponto de História</button><button type="button" data-action="rest">Descansar (6 horas)</button></div>{{/if}}
+      <div class="ess20-field-grid"><label>Deslocamento terrestre (pés) <input type="number" name="system.movement.ground" min="0" value="{{system.movement.ground}}"></label><label>Voo (pés) <input type="number" name="system.movement.flying" min="0" value="{{system.movement.flying}}"></label><label>Natação (pés) <input type="number" name="system.movement.swimming" min="0" value="{{system.movement.swimming}}"></label><label>Tamanho <input type="text" name="system.attributes.size" value="{{system.attributes.size}}"></label><label>Armadura nativa / adicional <input type="number" name="system.attributes.armor" value="{{system.attributes.armor}}"></label><label>Bônus Resistência <input type="number" name="system.attributes.toughnessBonus" value="{{system.attributes.toughnessBonus}}"></label><label>Bônus Evasão <input type="number" name="system.attributes.evasionBonus" value="{{system.attributes.evasionBonus}}"></label><label>Bônus Vontade <input type="number" name="system.attributes.willpowerBonus" value="{{system.attributes.willpowerBonus}}"></label><label>Bônus Astúcia <input type="number" name="system.attributes.clevernessBonus" value="{{system.attributes.clevernessBonus}}"></label><label>Bônus Iniciativa <input type="number" name="system.attributes.initiativeBonus" value="{{system.attributes.initiativeBonus}}"></label></div>
+      <label class="ess20-text-block">Condições <textarea name="system.attributes.conditions">{{system.attributes.conditions}}</textarea></label>
+      <div class="ess20-field-grid"><label>Piloto (ID do personagem) <input type="text" name="system.zord.pilot" value="{{system.zord.pilot}}"></label><label>Zords combinados (IDs separados por vírgula) <input type="text" name="system.zord.linked" value="{{system.zord.linked}}"></label><label>Tripulação <input type="text" name="system.zord.crew" value="{{system.zord.crew}}"></label><label>Traços da Megaforma <input type="text" name="system.zord.megaTraits" value="{{system.zord.megaTraits}}"></label></div>
+      <label class="ess20-check"><input type="checkbox" name="system.zord.combiner" {{#if system.zord.combiner}}checked{{/if}}> Possui recurso de combinação</label>
+    </section>
+  </main>
+  <footer class="ess20-footer"><span>RANGERS · ESSENCE20</span><span>Adaptação de fã, não oficial • v0.1.0</span></footer>
+</div>
