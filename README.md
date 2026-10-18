@@ -1,6 +1,6 @@
 # Rangers · Essence20 — sistema de fã para Foundry VTT 14.369
 
-**Versão:** 0.2.0 | **Idioma da interface:** português brasileiro | **Manifesto:** `system.json`
+**Versão:** 0.2.1 | **Idioma da interface:** português brasileiro | **Manifesto:** `system.json`
 
 Adaptação técnica **não oficial** para uso com o livro *Power Rangers Roleplaying Game — Core Rulebook* (Renegade Game Studios, Essence20). Não inclui ilustrações, personagens prontos, longas transcrições de regras ou material gráfico protegido. Não substitui o livro.
 
@@ -16,7 +16,7 @@ Adaptação técnica **não oficial** para uso com o livro *Power Rangers Rolepl
 **Windows**: a pasta padrão costuma ser `%LOCALAPPDATA%\FoundryVTT\Data\systems\power-rangers-essence20` (varia conforme instalação).
 
 
-## Evolução e retratos (v0.2.0)
+## Evolução e retratos (v0.2.1)
 
 - **Sete papéis, 140 marcos:** Preto, Azul, Verde, Rosa, Vermelho, Amarelo e Branco, do nível 1 ao 20; aumentos de Essências, capacidade de Poder Pessoal e treinamento inicial calculados automaticamente. Alterações de nível e papel são reversíveis.
 - **Concessões de papel:** ao atingir um nível, o sistema insere fichas de benefícios próprios de classe, sem repetir concessões. Ao perder um nível, remove concessões automáticas indevidas.
@@ -68,9 +68,9 @@ Ao executar a macro de catálogo, cria-se um ator de Equipe com permissão de Pr
 - Equipamentos e armaduras: 102–130; Zords e combinações: 131–154.
 - Combate, Defesas, dano, recuperação: 155–177.
 
-## Limites importantes (v0.2.0)
+## Limites importantes (v0.2.1)
 
-- **Compatibilidade-alvo:** Foundry 14.369. Os arquivos passaram por validação estática e testes unitários das fórmulas; **não foram executados num servidor Foundry 14.369**. O manifesto não declara uma versão `verified`, pois ainda não houve teste de execução na instalação Foundry 14.369.
+- **Compatibilidade-alvo:** Foundry 14.369. Os arquivos passaram por validação estática e testes unitários das fórmulas; **não foram executados num servidor Foundry 14.369**. O manifesto declara `verified: 14.369` para permitir avaliação de compatibilidade no instalador. Isso é uma configuração declarativa; **não comprova execução em um servidor Foundry 14.369**. Recomenda-se manter cópia de segurança do mundo.
 - A progressão numérica é automática; escolhas de benefícios são explicitamente concedidas pelo jogador. A criação do personagem ainda não inclui validação rígida da distribuição das 12 Essências iniciais.
 - Recursos de Zord, dano múltiplo, combinações e ações em combate não representam automação completa de todas as exceções do livro.
 - **Não há sincronia entre a reserva de Poder do Zord e o piloto**; o Mestre ajusta a reserva quando apropriado.
@@ -84,7 +84,7 @@ As rolagens utilizam `Roll.toMessage()` do núcleo, aceitas pelo ecossistema de 
 
 ## GitHub (para distribuição posterior)
 
-O arquivo `system.json` está configurado para a conta `tulioscost` e a versão `v0.2.0`. Os endereços do manifesto e ZIP tornam-se operacionais após publicação da nova Release. Consulte `COMO-PUBLICAR-v0.2.0.md`.
+O arquivo `system.json` está configurado para a conta `tulioscost` e a versão `v0.2.1`. Os endereços do manifesto e ZIP tornam-se operacionais após publicação da nova Release. Consulte `COMO-PUBLICAR-v0.2.1.md`.
 
 ## Direitos e atribuição
 
