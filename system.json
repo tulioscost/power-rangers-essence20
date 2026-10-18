@@ -2,15 +2,15 @@
   "id": "power-rangers-essence20",
   "type": "system",
   "title": "Rangers • Essence20 (não oficial)",
-  "description": "Sistema de fã para Foundry VTT 14.369; progressão 1–20 dos sete papéis, catálogos de referência, ficha estilizada, troca de retratos, testes Essence20 e Zords.",
-  "version": "0.2.1",
+  "description": "Essence20 para Foundry 14: ficha V2 reforçada, retratos editáveis, progressão 1–20, compêndios automáticos e manual PT-BR original de referência.",
+  "version": "0.3.0",
   "authors": [
     {
       "name": "Community adaptation"
     }
   ],
   "compatibility": {
-    "minimum": "14.369",
+    "minimum": "14",
     "verified": "14.369",
     "maximum": "14"
   },
@@ -56,6 +56,6 @@
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.power",
   "manifest": "https://github.com/tulioscost/power-rangers-essence20/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/power-rangers-essence20/releases/download/v0.2.1/power-rangers-essence20.zip",
+  "download": "https://github.com/tulioscost/power-rangers-essence20/releases/download/v0.3.0/power-rangers-essence20.zip",
   "url": "https://github.com/tulioscost/power-rangers-essence20"
 }

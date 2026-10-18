@@ -1,14 +1,9 @@
-# Rangers · Essence20 — v0.2.1 — Correção de compatibilidade no Foundry VTT 14
+# Rangers • Essence20 — Release v0.3.0
 
-## Problema investigado
+**Correção crítica:** a ficha V14 é registrada como padrão e a ficha genérica do núcleo é desativada para os tipos deste sistema. Macro de reparo para personagens preexistentes.
 
-A versão 0.2.0 apresentava `Compatibility Unknown` no seletor de sistemas, pois o manifesto não declarava `compatibility.verified`. A versão 0.2.1 configura `minimum: 14.369`, `verified: 14.369` e `maximum: 14` (limite por geração), segundo o formato documentado pelo Foundry VTT. Isso corrige o metadado exibido no Setup, mas não constitui, por si só, garantia de que qualquer problema de criação de mundo esteja resolvido.
+**Conteúdo:** 8 compêndios de mundo criados automaticamente (incluindo manual original de consulta em português, 15 entradas); nova distribuição de pontos de perícia; ações de treino/especialização; retratos civil e morfado; aprimoramentos visuais e tradução de tipos.
 
-## Ajustes
+**Limitação:** não inclui tradução integral nem os blocos oficiais completos. Testes automatizados não equivalem a execução real no Foundry.
 
-- Manifesto atualizado de 0.2.0 para 0.2.1 e compatibilidade declarada explicitamente.
-- URL de download do ZIP fixa na tag `v0.2.1`; URL do manifesto aponta à Release mais recente.
-- Novo teste de inicialização com APIs simuladas que exercita o hook `init`, o registro de dados e o registro de fichas. Total de 27 testes automatizados aprovados.
-- Não há migração dos dados de personagens nem alteração das regras mecânicas em relação à v0.2.0.
-
-**Status de teste:** testes unitários e de inicialização simulada, sem execução no aplicativo Foundry VTT 14.369 licenciado. Se houver erro ao iniciar mundo, obter a primeira mensagem em vermelho no F12 > Console e os logs do servidor.
+**Publicar:** enviar os arquivos `system.json`, `power-rangers-essence20.zip` e `SHA256SUMS.txt` para a nova Release `v0.3.0`. Atualize o código do repositório para manter coerência nas próximas versões.
