@@ -53,5 +53,8 @@
   },
   "initiative": "1d20",
   "primaryTokenAttribute": "resources.health",
-  "secondaryTokenAttribute": "resources.power"
+  "secondaryTokenAttribute": "resources.power",
+  "manifest": "https://github.com/tulioscost/power-rangers-essence20/releases/latest/download/system.json",
+  "download": "https://github.com/tulioscost/power-rangers-essence20/releases/download/v0.1.0/power-rangers-essence20.zip",
+  "url": "https://github.com/tulioscost/power-rangers-essence20"
 }
